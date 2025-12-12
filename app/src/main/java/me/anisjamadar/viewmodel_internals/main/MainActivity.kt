@@ -31,6 +31,7 @@ import me.anisjamadar.viewmodel_internals.main.MainViewModel
 import me.anisjamadar.viewmodel_internals.MyApplication
 import me.anisjamadar.viewmodel_internals.next.NextActivity
 import me.anisjamadar.viewmodel_internals.ui.theme.ViewModelInternalsTheme
+import me.anisjamadar.viewmodel_internals.viewmodel.MyViewModel
 
 class MainActivity : ComponentActivity() {
 
@@ -58,7 +59,7 @@ class MainActivity : ComponentActivity() {
     override fun onDestroy() {
         super.onDestroy()
         if (!isChangingConfigurations) {
-            (application as MyApplication).clearViewModel(MainViewModel::class.java as Class<ViewModel>)
+            (application as MyApplication).clearViewModel(MainViewModel::class.java as Class<MyViewModel>)
         }
     }
 }

@@ -22,11 +22,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.anisjamadar.viewmodel_internals.MyApplication
-import me.anisjamadar.viewmodel_internals.main.MainViewModel
 import me.anisjamadar.viewmodel_internals.ui.theme.ViewModelInternalsTheme
+import me.anisjamadar.viewmodel_internals.viewmodel.MyViewModel
 import me.anisjamadar.viewmodel_internals.viewmodel.ViewModelFactory
 
 class NextActivity : ComponentActivity() {
@@ -61,7 +60,7 @@ class NextActivity : ComponentActivity() {
     override fun onDestroy() {
         super.onDestroy()
         if (!isChangingConfigurations) {
-            (application as MyApplication).clearViewModel(NextViewModel::class.java as Class<ViewModel>)
+            (application as MyApplication).clearViewModel(NextViewModel::class.java as Class<MyViewModel>)
         }
     }
 }

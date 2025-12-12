@@ -1,9 +1,7 @@
 package me.anisjamadar.viewmodel_internals.viewmodel
 
-import androidx.lifecycle.ViewModel
-
 class DefaultFactory : ViewModelFactory {
-    override fun create(modelClass: Class<out ViewModel>): ViewModel {
+    override fun create(modelClass: Class<out MyViewModel>): MyViewModel {
         return modelClass.getDeclaredConstructor().newInstance()
     }
 }

@@ -1,0 +1,3 @@
+package me.anisjamadar.viewmodel_internals.viewmodel
+
+interface MyViewModel
